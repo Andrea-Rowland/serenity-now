@@ -18,7 +18,7 @@
     //       }); 
     //     loadClient()
     // })
-   var youTubeurl= "https://www.youtube.com/watch?v=" 
+   
    setTimeout(()=>{
     loadClient()
    },2000)
@@ -46,10 +46,22 @@
         "q": "Sound Bath"
     })
         .then(function(response) {
+            var youTubeurl= "https://www.youtube.com/embed/" 
                 // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
+                console.log(response.result.items[0].id);
+                var youtube=document.querySelector(".youtube")
+                for (let index = 0; index < 3; index++) {
+                var id=response.result.items[index].id.videoId    
+                var video=document.createElement("iframe")
+                video.setAttribute("src",youTubeurl+id)
+                video.setAttribute("height",250)
+                video.setAttribute("width",250)
+                youtube.append(video)
+                }
               },
               function(err) { console.error("Execute error", err); });
   }
+
+
   
  
