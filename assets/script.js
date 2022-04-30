@@ -73,13 +73,18 @@ var apiFetch = function () {
     })
     .then(function (data) {
       console.log(data);
-      for (let i = 0; i < 100; i++) {
+      
+      document.getElementById("quote-gen").addEventListener("click", function() {
         var randNum =Math.floor(Math.random() * 100);
-        var quote = data[randNum].text
-        console.log(quote)
-        var qAuthor = data[randNum].author
-        console.log(qAuthor)
-      }
+        var quotes = data[randNum]
+        // console.log(quotes.text)
+        // console.log(quotes.author)
+        var quote = JSON.stringify(quotes.text)
+        var quoteAuthor =JSON.stringify(quotes.author)
+        
+        document.getElementById("quote-item").innerHTML += quote + " -" + quoteAuthor
+
+      })
     });
 
 
