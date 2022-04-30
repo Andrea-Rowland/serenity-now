@@ -65,3 +65,23 @@
 
   
  
+var apiFetch = function () {
+  fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+      return response.json();
+      // console.log(response)
+    })
+    .then(function (data) {
+      console.log(data);
+      for (let i = 0; i < 100; i++) {
+        var randNum =Math.floor(Math.random() * 100);
+        var quote = data[randNum].text
+        console.log(quote)
+        var qAuthor = data[randNum].author
+        console.log(qAuthor)
+      }
+    });
+
+
+}
+apiFetch()
