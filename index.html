@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Serenity Now</title>
-    <link rel="stylesheet" href="./assets/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <link rel="stylesheet" href="assets/style.css">
     <!-- FontAwesome CDN link for icons -->
     <script src="https://kit.fontawesome.com/981fdddf67.js" crossorigin="anonymous"></script>
 </head>
@@ -14,25 +17,29 @@
     <!-- NAVIGATION -->
     <header>
         <h1>
-            <a href="/">Serenity Now</a>
+            <div class="deep-purple darken-4 grey-text">Serenity Now</div>
+            
         </h1>
         <!--Testing branch-->
+        
         <nav>
+
             <!-- UNORDERED LIST ELEMENT -->
             <ul>
                 <!-- LIST ELEMENT -->
                 <li>
                     <!-- ANCHOR ELEMENT -->
-                    <a href="#videos">Videos</a>
+                    
+                    <a href="#videos"button class="btn btn-large deep-purple darken-4 grey-text">Videos</button> </a>
                 </li>
                 <li>
-                    <a href="#soundcloud">Soundcloud</a>
+                     <a href="#soundcloud"button class="btn btn-large deep-purple darken-4 grey-text">Soundcloud</button> </a>
                 </li>
                 <li>
-                    <a href="#inspirational-qoutes">Inspirational Qoutes</a>
+                    <a href="inspirational-quotes"button class="btn btn-large deep-purple darken-4 grey-text">Inspirational Quotes</button> </a>
                 </li>
                 <li>
-                    <a href="#gallery">Gallery</a>
+                    <a href="#gallery"button class="btn btn-large deep-purple darken-4 grey-text">Gallery</button> </a>
                 </li>
             </ul>
         </nav>
@@ -46,7 +53,7 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente iure quam pariatur dolorum incidunt commodi. Nemo dolor quis laborum minus molestias veritatis animi eaque. Natus nulla beatae porro corrupti libero?</p>
         </div>
         <div class="hero-form">
-            <h3>Get Started Today</h3>
+            <h3>Free Birthchart sign up here!</h3>
             <p>Sign in using the form to access everything Serenity Now has to offer.</p>
         <!-- ADD FORM ELEMENT -->   
         <form>
@@ -69,6 +76,7 @@
                 Videos
             </h2>
         </div>
+        <div class="youtube"></div>
     </section> 
 
     <!-- "soundcloud" section -->
@@ -80,7 +88,7 @@
         </div>
     </section> 
 
-    <!-- "inspiration-qoutes" section -->
+    <!-- "inspiration-quotes" section -->
      <section id="inspirational-quotes">
         <div class="flex-row">
             <h2 class="section-title primary-border">
@@ -99,11 +107,24 @@
     </section> 
     
     <!-- FOOTER -->
+    <section class="footer">
+        
     <footer>
         <h2>Built with peace by Serenity Now.</h2>
     </footer>
 
-
+    <script src="https://apis.google.com/js/api.js?onload=onLoadCallback" async defer></script>
+    <script>
+        
+        window.onLoadCallback = function(){
+            console.log("Seinfeld")
+            gapi.load("client:auth2", function() {
+            gapi.auth2.init({
+              client_id: '63303441351-oj03veb03olj4le9bcvas5n873tiaq4k.apps.googleusercontent.com'
+            }); 
+        })
+        }
+        </script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
