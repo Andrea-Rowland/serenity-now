@@ -82,8 +82,11 @@ var apiFetch = function () {
         var quote = JSON.stringify(quotes.text)
         var quoteAuthor =JSON.stringify(quotes.author)
         
-        document.getElementById("quote-item").innerHTML += quote + " -" + quoteAuthor
-
+        if (quoteAuthor === "null") {
+          document.getElementById("quote-item").innerHTML = quote
+        }else{
+          document.getElementById("quote-item").innerHTML = quote + " -" + quoteAuthor
+        }
       })
     });
 
