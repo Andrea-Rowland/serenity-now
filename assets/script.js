@@ -65,3 +65,34 @@
 
   
  
+var apiFetch = function () {
+  fetch("https://type.fit/api/quotes")
+    .then(function (response) {
+      return response.json();
+      // console.log(response)
+    })
+    .then(function (data) {
+      console.log(data);
+      
+      document.getElementById("quote-gen").addEventListener("click", function() {
+        var randNum =Math.floor(Math.random() * 100);
+        var quotes = data[randNum]
+        // console.log(quotes.text)
+        // console.log(quotes.author)
+        var quote = JSON.stringify(quotes.text)
+        var quoteAuthor =JSON.stringify(quotes.author)
+        
+        if (quoteAuthor === "null") {
+          document.getElementById("quote-item").innerHTML = quote
+        }else{
+          document.getElementById("quote-item").innerHTML = quote + " -" + quoteAuthor
+        }
+      })
+    });
+
+
+}
+apiFetch()
+
+
+
