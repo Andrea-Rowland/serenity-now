@@ -1,0 +1,42 @@
+
+  
+  /* Hero Style Start */
+  .hero {
+    background-image: url('./images/pexels-photo-289586.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: silver;
+    font-family: cursive, 'Times New Roman', Times, serif, sans-serif;
+    
+
+  }
+
+  .hero-form {
+    border: 5px solid silver;
+    background-color: gray;
+    padding: 20px;
+    width: 40%;
+    margin: 3.5%;
+    color: darkblue;
+    font-family: cursive, 'Times New Roman', Times, serif, sans-serif;
+    display: inline-block;
+   
+  
+  }
+
+  .footer {
+    background-image: url('./images/Chakra2.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: silver;
+    font-family: cursive, Arial, sans-serif;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  
