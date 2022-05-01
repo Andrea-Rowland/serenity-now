@@ -30,6 +30,24 @@
 //               function(err) { console.error("Error signing in", err); });
 //     }
 
+const name = document.querySelector("#name");
+const birthday = document.querySelector("#birthday");
+
+const user = {
+  name: "",
+  birthday: "",
+}
+var saveUser = function() {
+window.localStorage.setItem("user", JSON.stringify(user));
+window.localStorage.getItem("user");
+let newUser = window.localStorage.getItem("user");
+console.log(JSON.parse(newUser));
+}
+
+
+
+
+
   function loadClient() {
     gapi.client.setApiKey("AIzaSyDoUXzepXuwRqDCS65-J-rld4zpvZlOO1U");
     return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
