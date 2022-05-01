@@ -20,6 +20,7 @@
     margin: 3.5%;
     color: darkblue;
     font-family: cursive, 'Times New Roman', Times, serif, sans-serif;
+    display: inline-block;
    
   
   }
@@ -31,6 +32,11 @@
     display: flex;
     color: silver;
     font-family: cursive, Arial, sans-serif;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   
