@@ -1,34 +1,6 @@
-    
-    // window.addEventListener("load", function(event){
-    //     let myPromise = new Promise(function(myResolve, myReject) {
-    //         // "Producing Code" (May take some time)
-            
-    //           myResolve(); // when successful
-    //           myReject();  // when error
-    //         });
-            
-    //         // "Consuming Code" (Must wait for a fulfilled Promise)
-    //         myPromise.then(
-    //           function(value) { /* code if successful */ },
-    //           function(error) { /* code if some error */ }
-    //         );
-    //     gapi.load("client:auth2", function() { 
-    //         console.log("Sound Bath")
-    //         gapi.auth2.init({client_id: "63303441351-oj03veb03olj4le9bcvas5n873tiaq4k.apps.googleusercontent.com"});
-    //       }); 
-    //     loadClient()
-    // })
-   
-   setTimeout(()=>{
+    setTimeout(()=>{
     loadClient()
    },2000)
-    
-//    function authenticate() {
-//    return gapi.auth2.getAuthInstance()
-//       .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-//       .then(function() { console.log("Sign-in successful"); },
-//               function(err) { console.error("Error signing in", err); });
-//     }
 
   function loadClient() {
     gapi.client.setApiKey("AIzaSyDoUXzepXuwRqDCS65-J-rld4zpvZlOO1U");
